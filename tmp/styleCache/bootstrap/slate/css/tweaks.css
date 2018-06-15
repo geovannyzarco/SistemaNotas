@@ -1,0 +1,37 @@
+/* details preview */
+
+.rnr-bs-dpreviewrow.rnr-bs-dpreviewrow .dpinline, .bs-details-opened.bs-details-opened {
+	background: gray;
+}
+
+.dpinline.dpinline.dpinline > div {
+    background: #333;
+    border-color: #111;
+}
+
+.bs-proceed-icon.bs-proceed-icon {
+	color: white;
+}
+
+
+/* flexible grid */
+@media (max-width: 767px) {
+	
+	.bs-flexgrid.bs-flexgrid  > * > .bs-gridrow.bs-gridrow {
+		border: none;
+		border-radius: 4px;
+	}
+
+
+	.bs-flexgrid.bs-flexgrid   .bs-gridrow:not(.rnr-hiddenelem) {
+		background-image: linear-gradient( to bottom, #3c3c3c 42px , transparent 43px );	
+	}
+	
+	.bs-flexgrid.bs-flexgrid.bs-flexgrid.bs-flexgrid  > * > * > .bs-gridicons a,
+	.bs-flexgrid.bs-flexgrid.bs-flexgrid.bs-flexgrid  > * > * > .bs-griddetails a
+	{
+		color: #ffffff;
+	
+	}
+
+}

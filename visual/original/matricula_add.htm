@@ -1,0 +1,252 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel matricula add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN A_o_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A_o}" data-fieldname="A_o" data-signal-error-for="A_o{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A_o}">
+		{BEGIN A_o_label}{$label matricula A_o}{END A_o_label}
+	</label>
+	<div class="col-md-6" >
+		{$A_o_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A_o">
+		<div class="text-muted" >
+		{$tooltip matricula A_o}
+		</div>
+	</div>
+</div>
+</div>
+{END A_o_fieldblock}
+
+			{BEGIN Carnet_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Carnet}" data-fieldname="Carnet" data-signal-error-for="Carnet{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Carnet}">
+		{BEGIN Carnet_label}{$label matricula Carnet}{END Carnet_label}
+	</label>
+	<div class="col-md-6" >
+		{$Carnet_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Carnet">
+		<div class="text-muted" >
+		{$tooltip matricula Carnet}
+		</div>
+	</div>
+</div>
+</div>
+{END Carnet_fieldblock}
+
+			{BEGIN Id_PlanEscolar_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Id_PlanEscolar}" data-fieldname="Id_PlanEscolar" data-signal-error-for="Id_PlanEscolar{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Id_PlanEscolar}">
+		{BEGIN Id_PlanEscolar_label}{$label matricula Id_PlanEscolar}{END Id_PlanEscolar_label}
+	</label>
+	<div class="col-md-6" >
+		{$Id_PlanEscolar_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Id_PlanEscolar">
+		<div class="text-muted" >
+		{$tooltip matricula Id_PlanEscolar}
+		</div>
+	</div>
+</div>
+</div>
+{END Id_PlanEscolar_fieldblock}
+
+			{BEGIN Estado_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Estado}" data-fieldname="Estado" data-signal-error-for="Estado{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Estado}">
+		{BEGIN Estado_label}{$label matricula Estado}{END Estado_label}
+	</label>
+	<div class="col-md-6" >
+		{$Estado_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Estado">
+		<div class="text-muted" >
+		{$tooltip matricula Estado}
+		</div>
+	</div>
+</div>
+</div>
+{END Estado_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reiniciar</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Volver a la lista</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancelar</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

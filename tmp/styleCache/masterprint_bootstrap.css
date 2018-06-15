@@ -1,0 +1,56 @@
+body.page-preview
+{
+padding-top:10px; padding-left:10px;
+}
+.page-preview .rnr-c-column,
+  .runner-pagewrapper .page-preview .rnr-c-column,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-c-column
+{
+margin-bottom:5px;
+}
+.page-preview .rnr-b-bsmasterprintheader,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-bsmasterprintheader,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader
+{
+text-align: left;
+}
+.page-preview .rnr-b-bsmasterprintheader > *,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintheader > *
+{
+
+}
+.page-preview .rnr-c-mastergrid,
+  .runner-pagewrapper .page-preview .rnr-c-mastergrid,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-c-mastergrid
+{
+margin-bottom:5px;
+}
+.page-preview .rnr-b-bsmasterprintgrid,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-bsmasterprintgrid,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid
+{
+text-align: left;
+}
+.page-preview .rnr-b-bsmasterprintgrid > *,
+  .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .rnr-b-bsmasterprintgrid > *
+{
+
+}
+body.page-preview .rnr-bare
+{
+padding-right: 5px;
+}

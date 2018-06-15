@@ -1,0 +1,285 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel admin_users view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN Id_Usuario_fieldblock}
+	<div class="{$fielddispclass_Id_Usuario} col-md-4 bs-viewcontrolgroup" data-fieldname="Id_Usuario">
+		<label class="control-label" for="{$labelfor_Id_Usuario}">
+			{$label admin_users Id_Usuario}
+		</label>
+		<div class="" >
+			{$Id_Usuario_value}&nbsp;
+		</div>
+	</div>
+{END Id_Usuario_fieldblock}
+					{BEGIN Usuario_fieldblock}
+	<div class="{$fielddispclass_Usuario} col-md-4 bs-viewcontrolgroup" data-fieldname="Usuario">
+		<label class="control-label" for="{$labelfor_Usuario}">
+			{$label admin_users Usuario}
+		</label>
+		<div class="" >
+			{$Usuario_value}&nbsp;
+		</div>
+	</div>
+{END Usuario_fieldblock}
+					{BEGIN Password_fieldblock}
+	<div class="{$fielddispclass_Password} col-md-4 bs-viewcontrolgroup" data-fieldname="Password">
+		<label class="control-label" for="{$labelfor_Password}">
+			{$label admin_users Password}
+		</label>
+		<div class="" >
+			{$Password_value}&nbsp;
+		</div>
+	</div>
+{END Password_fieldblock}
+					{BEGIN Nombre_fieldblock}
+	<div class="{$fielddispclass_Nombre} col-md-4 bs-viewcontrolgroup" data-fieldname="Nombre">
+		<label class="control-label" for="{$labelfor_Nombre}">
+			{$label admin_users Nombre}
+		</label>
+		<div class="" >
+			{$Nombre_value}&nbsp;
+		</div>
+	</div>
+{END Nombre_fieldblock}
+					{BEGIN Apellido_fieldblock}
+	<div class="{$fielddispclass_Apellido} col-md-4 bs-viewcontrolgroup" data-fieldname="Apellido">
+		<label class="control-label" for="{$labelfor_Apellido}">
+			{$label admin_users Apellido}
+		</label>
+		<div class="" >
+			{$Apellido_value}&nbsp;
+		</div>
+	</div>
+{END Apellido_fieldblock}
+					{BEGIN DUI_fieldblock}
+	<div class="{$fielddispclass_DUI} col-md-4 bs-viewcontrolgroup" data-fieldname="DUI">
+		<label class="control-label" for="{$labelfor_DUI}">
+			{$label admin_users DUI}
+		</label>
+		<div class="" >
+			{$DUI_value}&nbsp;
+		</div>
+	</div>
+{END DUI_fieldblock}
+					{BEGIN Direccion_fieldblock}
+	<div class="{$fielddispclass_Direccion} col-md-4 bs-viewcontrolgroup" data-fieldname="Direccion">
+		<label class="control-label" for="{$labelfor_Direccion}">
+			{$label admin_users Direccion}
+		</label>
+		<div class="" >
+			{$Direccion_value}&nbsp;
+		</div>
+	</div>
+{END Direccion_fieldblock}
+					{BEGIN FechaNac_fieldblock}
+	<div class="{$fielddispclass_FechaNac} col-md-4 bs-viewcontrolgroup" data-fieldname="FechaNac">
+		<label class="control-label" for="{$labelfor_FechaNac}">
+			{$label admin_users FechaNac}
+		</label>
+		<div class="" >
+			{$FechaNac_value}&nbsp;
+		</div>
+	</div>
+{END FechaNac_fieldblock}
+					{BEGIN Telefono_fieldblock}
+	<div class="{$fielddispclass_Telefono} col-md-4 bs-viewcontrolgroup" data-fieldname="Telefono">
+		<label class="control-label" for="{$labelfor_Telefono}">
+			{$label admin_users Telefono}
+		</label>
+		<div class="" >
+			{$Telefono_value}&nbsp;
+		</div>
+	</div>
+{END Telefono_fieldblock}
+					{BEGIN Estado_fieldblock}
+	<div class="{$fielddispclass_Estado} col-md-4 bs-viewcontrolgroup" data-fieldname="Estado">
+		<label class="control-label" for="{$labelfor_Estado}">
+			{$label admin_users Estado}
+		</label>
+		<div class="" >
+			{$Estado_value}&nbsp;
+		</div>
+	</div>
+{END Estado_fieldblock}
+					{BEGIN Id_TipoUsuario_fieldblock}
+	<div class="{$fielddispclass_Id_TipoUsuario} col-md-4 bs-viewcontrolgroup" data-fieldname="Id_TipoUsuario">
+		<label class="control-label" for="{$labelfor_Id_TipoUsuario}">
+			{$label admin_users Id_TipoUsuario}
+		</label>
+		<div class="" >
+			{$Id_TipoUsuario_value}&nbsp;
+		</div>
+	</div>
+{END Id_TipoUsuario_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-8 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Cerrar ventana</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>Editar</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

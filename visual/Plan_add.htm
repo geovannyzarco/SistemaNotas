@@ -1,0 +1,273 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel Plan add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN CodigoPlan_fieldblock}<div class=container>
+<div class="form-group {$fielddispclass_CodigoPlan}" data-fieldname="CodigoPlan" data-signal-error-for="CodigoPlan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CodigoPlan}">
+		{BEGIN CodigoPlan_label}{$label Plan CodigoPlan}{END CodigoPlan_label}
+	</label>
+	<div class="col-md-6" >
+		{$CodigoPlan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CodigoPlan">
+		<div class="text-muted" >
+		{$tooltip Plan CodigoPlan}
+		</div>
+	</div>
+</div>
+</div>
+{END CodigoPlan_fieldblock}
+
+			{BEGIN Id_Grado_fieldblock}<div class=container>
+<div class="form-group {$fielddispclass_Id_Grado}" data-fieldname="Id_Grado" data-signal-error-for="Id_Grado{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Id_Grado}">
+		{BEGIN Id_Grado_label}{$label Plan Id_Grado}{END Id_Grado_label}
+	</label>
+	<div class="col-md-6" >
+		{$Id_Grado_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Id_Grado">
+		<div class="text-muted" >
+		{$tooltip Plan Id_Grado}
+		</div>
+	</div>
+</div>
+</div>
+{END Id_Grado_fieldblock}
+
+			{BEGIN Id_Seccion_fieldblock}<div class=container>
+<div class="form-group {$fielddispclass_Id_Seccion}" data-fieldname="Id_Seccion" data-signal-error-for="Id_Seccion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Id_Seccion}">
+		{BEGIN Id_Seccion_label}{$label Plan Id_Seccion}{END Id_Seccion_label}
+	</label>
+	<div class="col-md-6" >
+		{$Id_Seccion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Id_Seccion">
+		<div class="text-muted" >
+		{$tooltip Plan Id_Seccion}
+		</div>
+	</div>
+</div>
+</div>
+{END Id_Seccion_fieldblock}
+
+
+{BEGIN details_periodo}<DIV data-pageid="1" class="bs-details"> 
+<DIV class="panel panel-info details-grid">
+
+<DIV class="panel-heading">
+	<H4 class="panel-title">Periodo
+		<span>	
+{BEGIN details_add_periodo_link}<BUTTON type="button" class="btn btn-xs btn-info" {$details_add_periodo_attrs}>Añadir nuevo</button>
+{END details_add_periodo_link}
+{BEGIN details_delete_periodo_link}<BUTTON type="button" class="btn btn-xs btn-info bs-invisible-button" {$details_delete_periodo_attrs}>Borrar artículos seleccionados</button>
+{END details_delete_periodo_link}
+
+{BEGIN saveall_periodo_link}<BUTTON type="button" class="btn btn-xs btn-info" {$savealllink_periodo_attrs} {$savealllink_periodo_span}>Guardar todo</button>
+{END saveall_periodo_link}
+{BEGIN cancelall_periodo_link}<BUTTON type="button" class="btn btn-xs btn-info" {$cancelalllink_periodo_attrs} {$cancelalllink_periodo_span}>Cancelar</button>
+{END cancelall_periodo_link}
+		</span>
+	</h4>
+</div>
+<DIV class="panel-body">
+	{$displayDetailTable_periodo}
+</div>
+</div>
+</div>
+{END details_periodo}
+	
+	
+	
+
+			
+		
+
+
+
+{BEGIN details_detalleplanescolar}<DIV class="bs-details" style="width: 855px; height: 117px;" data-pageid="1"> 
+<DIV class="panel panel-info details-grid">
+
+<DIV class="panel-heading">
+	<H4 class="panel-title">Detalles Plan Escolar
+		<span>	
+{BEGIN details_add_detalleplanescolar_link}<BUTTON type="button" class="btn btn-xs btn-info" {$details_add_detalleplanescolar_attrs}>Añadir nuevo</button>
+{END details_add_detalleplanescolar_link}
+{BEGIN details_delete_detalleplanescolar_link}<BUTTON type="button" class="btn btn-xs btn-info bs-invisible-button" {$details_delete_detalleplanescolar_attrs}>Borrar artículos seleccionados</button>
+{END details_delete_detalleplanescolar_link}
+
+{BEGIN saveall_detalleplanescolar_link}<BUTTON type="button" class="btn btn-xs btn-info" {$savealllink_detalleplanescolar_attrs} {$savealllink_detalleplanescolar_span}>Guardar todo</button>
+{END saveall_detalleplanescolar_link}
+{BEGIN cancelall_detalleplanescolar_link}<BUTTON type="button" class="btn btn-xs btn-info" {$cancelalllink_detalleplanescolar_attrs} {$cancelalllink_detalleplanescolar_span}>Cancelar</button>
+{END cancelall_detalleplanescolar_link}
+		</span>
+	</h4>
+</div>
+<DIV class="panel-body">
+	{$displayDetailTable_detalleplanescolar}
+</div>
+</div>
+</div>
+{END details_detalleplanescolar}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}{BEGIN save_button}<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN reset_button}<button class="btn btn-default" id="resetButton{$id}">Reiniciar</button>
+	{END reset_button}
+	{BEGIN back_button}<button class="btn btn-default" id="backButton{$id}">Volver a la lista</button>
+	{END back_button}
+	{BEGIN cancel_button}<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancelar</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

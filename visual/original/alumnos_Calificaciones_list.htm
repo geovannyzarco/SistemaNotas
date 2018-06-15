@@ -1,0 +1,939 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_top}
+<div {$top_chiddenattr} data-pageid="{$pageid}" data-container="top" class="container    "> 
+
+
+{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar articulos seleccionados</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="alumnos_Calificaciones_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="alumnos_Calificaciones_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="alumnos_Calificaciones_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Conectar</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+	<span class="dropdown">
+		<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>	{$username}</button>
+		<ul class="dropdown-menu">
+	{BEGIN logoutbutton}
+			<li><a href="#" {$logoutlink_attrs}>Desconectarse</a></li>
+	{END logoutbutton}
+
+	{BEGIN adminarea_link}
+	<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Area Admin</a></li>
+	{END adminarea_link}
+
+
+
+		</ul></span>{END loggedas_message}</span>
+
+
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+
+
+
+
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+
+
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+
+
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar artículos seleccionados</button>
+	{END deleteselected_link}
+
+	</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	Displaying <span>{$firstrecord}</span> - <span>{$lastrecord}</span> of <span>{$records_found}</span>
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="alumnos_Calificaciones_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="alumnos_Calificaciones_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_calificaciones}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailscalificaciones{$id}">
+									<input type="checkbox" value="calificaciones" id="printDetailscalificaciones{$id}" checked>
+									Calificaciones
+								</label>
+							</div>
+					{END print_details_calificaciones}
+					{BEGIN print_details_matricula}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsmatricula{$id}">
+									<input type="checkbox" value="matricula" id="printDetailsmatricula{$id}" checked>
+									Matricula
+								</label>
+							</div>
+					{END print_details_matricula}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Resultados por página:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+
+
+
+</div>
+{END container_top}
+
+
+		</div>
+		<div class="bs-middle bs-centered">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+
+			</div>
+			<div class="bs-center">
+				
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=Carnet]:before {
+		content: "{$label alumnos_Calificaciones Carnet}";
+	}
+	.bs-gridcell[data-field=Foto]:before {
+		content: "{$label alumnos_Calificaciones Foto}";
+	}
+	.bs-gridcell[data-field=Nombre]:before {
+		content: "{$label alumnos_Calificaciones Nombre}";
+	}
+	.bs-gridcell[data-field=Asignatura]:before {
+		content: "{$label alumnos_Calificaciones Asignatura}";
+	}
+	.bs-gridcell[data-field=Periodo]:before {
+		content: "{$label alumnos_Calificaciones Periodo}";
+	}
+	.bs-gridcell[data-field=Actividad1]:before {
+		content: "{$label alumnos_Calificaciones Actividad1}";
+	}
+	.bs-gridcell[data-field=Actividad2]:before {
+		content: "{$label alumnos_Calificaciones Actividad2}";
+	}
+	.bs-gridcell[data-field=Actividad3]:before {
+		content: "{$label alumnos_Calificaciones Actividad3}";
+	}
+	.bs-gridcell[data-field=Actividad4]:before {
+		content: "{$label alumnos_Calificaciones Actividad4}";
+	}
+	.bs-gridcell[data-field=PromActividad]:before {
+		content: "{$label alumnos_Calificaciones PromActividad}";
+	}
+	.bs-gridcell[data-field=Laboratorio1]:before {
+		content: "{$label alumnos_Calificaciones Laboratorio1}";
+	}
+	.bs-gridcell[data-field=Laboratorio2]:before {
+		content: "{$label alumnos_Calificaciones Laboratorio2}";
+	}
+	.bs-gridcell[data-field=PromLaboratorio]:before {
+		content: "{$label alumnos_Calificaciones PromLaboratorio}";
+	}
+	.bs-gridcell[data-field=Examen]:before {
+		content: "{$label alumnos_Calificaciones Examen}";
+	}
+	.bs-gridcell[data-field=NotaFinal]:before {
+		content: "{$label alumnos_Calificaciones NotaFinal}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN alumnos_Calificaciones_dtable_column}
+									<th >&nbsp;</th>
+									{END alumnos_Calificaciones_dtable_column}
+									
+									{BEGIN Carnet_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Carnet_class}">
+									{BEGIN Carnet_fieldheader}
+																				<span {$Carnet_orderlinkattrs}>
+											{$label alumnos_Calificaciones Carnet}
+										</span>
+									{END Carnet_fieldheader}
+									</th>
+									{END Carnet_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Foto_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Foto_class}">
+									{BEGIN Foto_fieldheader}
+																				<span {$Foto_orderlinkattrs}>
+											{$label alumnos_Calificaciones Foto}
+										</span>
+									{END Foto_fieldheader}
+									</th>
+									{END Foto_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Nombre_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Nombre_class}">
+									{BEGIN Nombre_fieldheader}
+																				<span {$Nombre_orderlinkattrs}>
+											{$label alumnos_Calificaciones Nombre}
+										</span>
+									{END Nombre_fieldheader}
+									</th>
+									{END Nombre_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Asignatura_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Asignatura_class}">
+									{BEGIN Asignatura_fieldheader}
+																				<span {$Asignatura_orderlinkattrs}>
+											{$label alumnos_Calificaciones Asignatura}
+										</span>
+									{END Asignatura_fieldheader}
+									</th>
+									{END Asignatura_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Periodo_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Periodo_class}">
+									{BEGIN Periodo_fieldheader}
+																				<span {$Periodo_orderlinkattrs}>
+											{$label alumnos_Calificaciones Periodo}
+										</span>
+									{END Periodo_fieldheader}
+									</th>
+									{END Periodo_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Actividad1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Actividad1_class}">
+									{BEGIN Actividad1_fieldheader}
+																				<span {$Actividad1_orderlinkattrs}>
+											{$label alumnos_Calificaciones Actividad1}
+										</span>
+									{END Actividad1_fieldheader}
+									</th>
+									{END Actividad1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Actividad2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Actividad2_class}">
+									{BEGIN Actividad2_fieldheader}
+																				<span {$Actividad2_orderlinkattrs}>
+											{$label alumnos_Calificaciones Actividad2}
+										</span>
+									{END Actividad2_fieldheader}
+									</th>
+									{END Actividad2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Actividad3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Actividad3_class}">
+									{BEGIN Actividad3_fieldheader}
+																				<span {$Actividad3_orderlinkattrs}>
+											{$label alumnos_Calificaciones Actividad3}
+										</span>
+									{END Actividad3_fieldheader}
+									</th>
+									{END Actividad3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Actividad4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Actividad4_class}">
+									{BEGIN Actividad4_fieldheader}
+																				<span {$Actividad4_orderlinkattrs}>
+											{$label alumnos_Calificaciones Actividad4}
+										</span>
+									{END Actividad4_fieldheader}
+									</th>
+									{END Actividad4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PromActividad_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PromActividad_class}">
+									{BEGIN PromActividad_fieldheader}
+																				<span {$PromActividad_orderlinkattrs}>
+											{$label alumnos_Calificaciones PromActividad}
+										</span>
+									{END PromActividad_fieldheader}
+									</th>
+									{END PromActividad_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Laboratorio1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Laboratorio1_class}">
+									{BEGIN Laboratorio1_fieldheader}
+																				<span {$Laboratorio1_orderlinkattrs}>
+											{$label alumnos_Calificaciones Laboratorio1}
+										</span>
+									{END Laboratorio1_fieldheader}
+									</th>
+									{END Laboratorio1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Laboratorio2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Laboratorio2_class}">
+									{BEGIN Laboratorio2_fieldheader}
+																				<span {$Laboratorio2_orderlinkattrs}>
+											{$label alumnos_Calificaciones Laboratorio2}
+										</span>
+									{END Laboratorio2_fieldheader}
+									</th>
+									{END Laboratorio2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PromLaboratorio_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PromLaboratorio_class}">
+									{BEGIN PromLaboratorio_fieldheader}
+																				<span {$PromLaboratorio_orderlinkattrs}>
+											{$label alumnos_Calificaciones PromLaboratorio}
+										</span>
+									{END PromLaboratorio_fieldheader}
+									</th>
+									{END PromLaboratorio_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Examen_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Examen_class}">
+									{BEGIN Examen_fieldheader}
+																				<span {$Examen_orderlinkattrs}>
+											{$label alumnos_Calificaciones Examen}
+										</span>
+									{END Examen_fieldheader}
+									</th>
+									{END Examen_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NotaFinal_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$NotaFinal_class}">
+									{BEGIN NotaFinal_fieldheader}
+																				<span {$NotaFinal_orderlinkattrs}>
+											{$label alumnos_Calificaciones NotaFinal}
+										</span>
+									{END NotaFinal_fieldheader}
+									</th>
+									{END NotaFinal_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Editar"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="Ver"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN alumnos_Calificaciones_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+								<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge calificaciones_badge" {$calificaciones_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$calificaciones_cntspan_class}" >{$calificaciones_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END alumnos_Calificaciones_dtable_column}
+
+
+	{BEGIN Carnet_fieldcolumn}
+	<td class="bs-gridcell {$Carnet_class}"  data-field=Carnet {$rowstyle} {$recordattrs}>
+		{$Carnet_value}
+	</td>
+{END Carnet_fieldcolumn}
+
+
+	{BEGIN Foto_fieldcolumn}
+	<td class="bs-gridcell {$Foto_class}"  data-field=Foto {$rowstyle} {$recordattrs}>
+		{$Foto_value}
+	</td>
+{END Foto_fieldcolumn}
+
+
+	{BEGIN Nombre_fieldcolumn}
+	<td class="bs-gridcell {$Nombre_class}"  data-field=Nombre {$rowstyle} {$recordattrs}>
+		{$Nombre_value}
+	</td>
+{END Nombre_fieldcolumn}
+
+
+	{BEGIN Asignatura_fieldcolumn}
+	<td class="bs-gridcell {$Asignatura_class}"  data-field=Asignatura {$rowstyle} {$recordattrs}>
+		{$Asignatura_value}
+	</td>
+{END Asignatura_fieldcolumn}
+
+
+	{BEGIN Periodo_fieldcolumn}
+	<td class="bs-gridcell {$Periodo_class}"  data-field=Periodo {$rowstyle} {$recordattrs}>
+		{$Periodo_value}
+	</td>
+{END Periodo_fieldcolumn}
+
+
+	{BEGIN Actividad1_fieldcolumn}
+	<td class="bs-gridcell {$Actividad1_class}"  data-field=Actividad1 {$rowstyle} {$recordattrs}>
+		{$Actividad1_value}
+	</td>
+{END Actividad1_fieldcolumn}
+
+
+	{BEGIN Actividad2_fieldcolumn}
+	<td class="bs-gridcell {$Actividad2_class}"  data-field=Actividad2 {$rowstyle} {$recordattrs}>
+		{$Actividad2_value}
+	</td>
+{END Actividad2_fieldcolumn}
+
+
+	{BEGIN Actividad3_fieldcolumn}
+	<td class="bs-gridcell {$Actividad3_class}"  data-field=Actividad3 {$rowstyle} {$recordattrs}>
+		{$Actividad3_value}
+	</td>
+{END Actividad3_fieldcolumn}
+
+
+	{BEGIN Actividad4_fieldcolumn}
+	<td class="bs-gridcell {$Actividad4_class}"  data-field=Actividad4 {$rowstyle} {$recordattrs}>
+		{$Actividad4_value}
+	</td>
+{END Actividad4_fieldcolumn}
+
+
+	{BEGIN PromActividad_fieldcolumn}
+	<td class="bs-gridcell {$PromActividad_class}"  data-field=PromActividad {$rowstyle} {$recordattrs}>
+		{$PromActividad_value}
+	</td>
+{END PromActividad_fieldcolumn}
+
+
+	{BEGIN Laboratorio1_fieldcolumn}
+	<td class="bs-gridcell {$Laboratorio1_class}"  data-field=Laboratorio1 {$rowstyle} {$recordattrs}>
+		{$Laboratorio1_value}
+	</td>
+{END Laboratorio1_fieldcolumn}
+
+
+	{BEGIN Laboratorio2_fieldcolumn}
+	<td class="bs-gridcell {$Laboratorio2_class}"  data-field=Laboratorio2 {$rowstyle} {$recordattrs}>
+		{$Laboratorio2_value}
+	</td>
+{END Laboratorio2_fieldcolumn}
+
+
+	{BEGIN PromLaboratorio_fieldcolumn}
+	<td class="bs-gridcell {$PromLaboratorio_class}"  data-field=PromLaboratorio {$rowstyle} {$recordattrs}>
+		{$PromLaboratorio_value}
+	</td>
+{END PromLaboratorio_fieldcolumn}
+
+
+	{BEGIN Examen_fieldcolumn}
+	<td class="bs-gridcell {$Examen_class}"  data-field=Examen {$rowstyle} {$recordattrs}>
+		{$Examen_value}
+	</td>
+{END Examen_fieldcolumn}
+
+
+	{BEGIN NotaFinal_fieldcolumn}
+	<td class="bs-gridcell {$NotaFinal_class}"  data-field=NotaFinal {$rowstyle} {$recordattrs}>
+		{$NotaFinal_value}
+	</td>
+{END NotaFinal_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

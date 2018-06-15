@@ -1,0 +1,14 @@
+[Thu Jun 14 19:18:25.868489 2018] [core:warn] [pid 14184:tid 640] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/russo/Dropbox/Proyectos/SistemaNotas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::f513:e5c4:2831:b5d5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 14 19:18:30.842855 2018] [mpm_winnt:notice] [pid 14184:tid 640] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Thu Jun 14 19:18:30.888119 2018] [mpm_winnt:notice] [pid 14184:tid 640] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Jun 14 19:18:30.888119 2018] [core:notice] [pid 14184:tid 640] AH00094: Command line: 'C:\\Program Files (x86)\\PHPRunner9.0\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files (x86)/PHPRunner9.0/EmbeddedServer -d C:\\Program Files (x86)\\PHPRunner9.0\\EmbeddedServer -f C:\\Users\\russo\\Dropbox\\Proyectos\\SistemaNotas\\tmp\\webserver.conf'
+[Thu Jun 14 19:18:30.903633 2018] [mpm_winnt:notice] [pid 14184:tid 640] AH00418: Parent: Created child process 14920
+[Thu Jun 14 19:18:31.838251 2018] [core:warn] [pid 14920:tid 628] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/russo/Dropbox/Proyectos/SistemaNotas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::f513:e5c4:2831:b5d5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 14 19:18:31.948826 2018] [core:warn] [pid 14920:tid 628] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/russo/Dropbox/Proyectos/SistemaNotas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::f513:e5c4:2831:b5d5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 14 19:18:32.188969 2018] [mpm_winnt:notice] [pid 14920:tid 628] AH00354: Child: Starting 64 worker threads.
+[Thu Jun 14 21:01:57.623526 2018] [mpm_winnt:notice] [pid 14184:tid 640] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Jun 14 21:02:00.188270 2018] [mpm_winnt:notice] [pid 14920:tid 628] AH00364: Child: All worker threads have exited.
+[Thu Jun 14 21:02:01.292606 2018] [mpm_winnt:notice] [pid 14184:tid 640] AH00430: Parent: Child process 14920 exited successfully.
